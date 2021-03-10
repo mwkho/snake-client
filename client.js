@@ -12,6 +12,11 @@ conn.on('data', (message) =>{
   console.log(message);
 });
 
+conn.on('connect', message => {
+  console.log('Now connected to the game server.');
+  conn.write("Name: MHW");
+});
+
 return conn;
 }
 
