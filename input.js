@@ -1,5 +1,3 @@
-const { builtinModules } = require("node:module");
-
 const setupInput = function(){
 
   const stdin = process.stdin;
@@ -8,7 +6,7 @@ const setupInput = function(){
   stdin.resume();
   stdin.on('data', (input) => {
     handleUserInput(input);
-  })
+  });
   return stdin;
 
 }
@@ -16,6 +14,22 @@ const setupInput = function(){
 const handleUserInput = function(key){
   if (key === '\u0003') {
     process.exit();
+  }
+
+  if (key === 'w'){
+    console.log("Move: up");
+  }
+
+  if (key === 'a'){
+    console.log('Move: left');
+  }
+
+  if (key === 's'){
+    console.log('Move: down');
+  }
+
+  if (key === 'd'){
+    console.log('Move: right');
   }
 }
 
