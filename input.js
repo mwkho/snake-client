@@ -34,6 +34,10 @@ const handleUserInput = function(key,conn){
   if (key === 'd'){
     conn.write('Move: right');
   }
+
+  if (key === 'q'){
+    conn.write('Say: FOOD!')
+  }
 }
 
 module.exports = {setupInput};
